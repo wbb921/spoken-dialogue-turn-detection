@@ -1,4 +1,4 @@
-# Spoken-dialogue-Turn-Detection
+# Spoken-Dialogue-Turn-Detection
 
 [![Star](https://img.shields.io/github/stars/wbb921/speech-turn-detection?style=social)](https://github.com/wbb921/speech-turn-detection/stargazers)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-yellow)](https://huggingface.co/luht/speech-turn-detection/tree/main)
@@ -8,7 +8,7 @@
 
 
 
-Speech Turn Detection refers to distinguishing between a short pause and the actual end of a user’s query.
+Spoken Dialogue Turn Detection refers to distinguishing between a short pause and the actual end of a user’s query.
 
 Traditional approaches rely on Voice Activity Detection (VAD) with a fixed delay, but VAD often misinterprets short pauses as endpoints, leading to delayed responses or premature cut-offs. 
 
