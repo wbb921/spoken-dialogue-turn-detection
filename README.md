@@ -43,6 +43,8 @@ which is printed on the screen
 
 and a numpy array which stores the turn-taking patterns as defined above with shape (2, T)
 
+The model outputs with a resolution of 12.5Hz(80 ms a frame)
+
 ## Usage
 
 The model is totally causal, which can be used in offline or streaming manner.
