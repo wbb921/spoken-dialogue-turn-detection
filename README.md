@@ -1,4 +1,4 @@
-# Speech-Turn-Detection
+# Spoken-dialogue-Turn-Detection
 
 [![Star](https://img.shields.io/github/stars/wbb921/speech-turn-detection?style=social)](https://github.com/wbb921/speech-turn-detection/stargazers)
 
