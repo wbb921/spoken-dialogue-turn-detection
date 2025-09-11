@@ -9,7 +9,7 @@ This repository provides an implementation of speech turn detection, which direc
 ## Architecture
 
 <div align=center>
-    <img src="https://github.com/wbb921/speech-turn-detection/blob/main/archi.png" style="zoom:50%" alt="图片名称"/>
+    <img src="https://github.com/wbb921/speech-turn-detection/blob/main/archi.png" style="zoom:20%" width="280" height="480" alt="图片名称"/>
 </div>
 
 ## Installation
