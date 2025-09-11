@@ -1,5 +1,8 @@
 # Speech-Turn-Detection
 
+[![Star](https://img.shields.io/github/stars/wbb921/speech-turn-detection?style=social)](https://github.com/wbb921/speech-turn-detection/stargazers)
+
+
 Speech Turn Detection refers to distinguishing between a short pause and the actual end of a user’s query.
 
 Traditional approaches rely on Voice Activity Detection (VAD) with a fixed delay, but VAD often misinterprets short pauses as endpoints, leading to delayed responses or premature cut-offs. 
