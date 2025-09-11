@@ -1,6 +1,6 @@
 # Speech-Turn-Detection
 
-Accurate and low-latency endpoint detection is crucial for building real-time full-duplex spoken dialogue systems. 
+Accurate and low-latency speech endpoint detection is crucial for building real-time full-duplex spoken dialogue systems. 
 
 Traditional approaches rely on Voice Activity Detection (VAD) with a fixed delay, but VAD often misinterprets short pauses as endpoints, leading to delayed responses or premature cut-offs. 
 
@@ -16,11 +16,25 @@ cd speech-turn-detection
 pip install -r requirements
 ```
 
+## Checkpoints
+
+The model is trained on SpokenWOZ (249h) and Fisher (1960h)
+
+The checkpoints can be downloaded from 
+
+https://huggingface.co/luht/speech-turn-detection/blob/main/model_spokenwoz.pt
+
+https://huggingface.co/luht/speech-turn-detection/blob/main/model_fisher_spokenwoz.pt
+
 ## Model Inputs/Outputs 
 
-Inputs should be stereo audios, with 24kHz sampling rate, some samples can be seen in the "data/" directory
+### Inputs
 
-The model outputs several turn-taking patterns: IPU(0), Listen(1), Gap(2), Pause(3), Overlap(4). Gap means mutual silence with speaker change before and after. Pause means mutual silence without speaker change.
+Inputs should be stereo audios, with 24kHz sampling rate, some samples can be found in the "data/" directory
+
+### Outputs
+
+The model outputs several turn-taking patterns: IPU(0), Listen(1), Gap(2), Pause(3), Overlap(4). Gap refers to mutual silence with speaker change before and after. Pause refers to mutual silence without speaker change.
 
 The endpoint(speaker turn point) can be seen as the timestamp where IPU(0) turns into Gap(2).
 
@@ -43,7 +57,7 @@ which is printed on the screen
 
 and a numpy array which stores the turn-taking patterns as defined above with shape (2, T)
 
-The model outputs with a resolution of 12.5Hz(80 ms a frame)
+The model outputs with a frequency of 12.5Hz (80 ms a frame)
 
 ## Usage
 
@@ -51,10 +65,22 @@ The model is totally causal, which can be used in offline or streaming manner.
 
 Offline inference
 ```bash
-python infer.py --audio_path "./data/MUL0001.wav" --checkpoint_path "./ckpt/best_model.pt" --output_dir "./inference_results"
+python infer.py --audio_path "./data/MUL0001.wav" --checkpoint_path "./ckpt/model_spokenwoz.pt" --output_dir "./inference_results"
 ```
 
 Streaming Inference
 ```bash
-python infer_streaming.py --audio_path "./data/MUL0001.wav" --checkpoint_path "./ckpt/best_model.pt" --output_dir "./inference_results"
+python infer_streaming.py --audio_path "./data/MUL0001.wav" --checkpoint_path "./ckpt/model_spokenwoz.pt" --output_dir "./inference_results"
 ```
+
+## Results 
+
+The model achieves an ep-cutoff rate of 4.72% on SpokenWOZ test set.
+| Method                       | ep-50 (ms) | ep-90 (ms) | ep-cutoff (%) |
+|------------------------------|------------|------------|---------------|
+| Silero_vad (200ms latency)       | 240        | 320        | 35.86         |
+| Silero_vad (500ms latency)       | 560        | 640        | 23.11         |
+| The proposed model           | 80         | 400        | 4.72          |
+
+
+
