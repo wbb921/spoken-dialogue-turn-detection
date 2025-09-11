@@ -26,6 +26,8 @@ https://huggingface.co/luht/speech-turn-detection/blob/main/model_spokenwoz.pt
 
 https://huggingface.co/luht/speech-turn-detection/blob/main/model_fisher_spokenwoz.pt
 
+place the pt file under the ckpt directory once downloaded
+
 ## Model Inputs/Outputs 
 
 ### Inputs
