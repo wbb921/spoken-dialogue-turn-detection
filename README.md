@@ -1,6 +1,7 @@
 # Spoken-dialogue-Turn-Detection
 
 [![Star](https://img.shields.io/github/stars/wbb921/speech-turn-detection?style=social)](https://github.com/wbb921/speech-turn-detection/stargazers)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-yellow)](https://huggingface.co/luht/speech-turn-detection/tree/main)
 
 
 Speech Turn Detection refers to distinguishing between a short pause and the actual end of a user’s query.
