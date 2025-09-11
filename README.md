@@ -6,6 +6,12 @@ Traditional approaches rely on Voice Activity Detection (VAD) with a fixed delay
 
 This repository provides an implementation of speech turn detection, which directly takes audio as inputs instead of texts.
 
+## Architecture
+
+<div align=center>
+    <img src="https://github.com/wbb921/speech-turn-detection/blob/main/archi.png" style="zoom:50%" alt="图片名称"/>
+</div>
+
 ## Installation
 
 ```bash
