@@ -46,7 +46,9 @@ The model outputs several turn-taking patterns: IPU(0), Listen(1), Gap(2), Pause
 
 The endpoint(speaker turn point) can be seen as the timestamp where IPU(0) turns into Gap(2).
 
-![image](https://github.com/wbb921/speech-turn-detection/blob/main/image.png)
+<div align=center>
+<img src="https://github.com/wbb921/speech-turn-detection/blob/main/image.png" style="zoom:20%" width="680" height="360" alt="图片名称"/>
+</div>
 
 The outputs will be 
 ```bash
