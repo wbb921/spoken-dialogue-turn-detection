@@ -1,4 +1,4 @@
-# Speech-Turn Detection
+# Speech-Turn-Detection
 
 Accurate and low-latency endpoint detection is crucial for building real-time full-duplex spoken dialogue systems. 
 
