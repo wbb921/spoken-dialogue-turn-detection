@@ -106,7 +106,7 @@ if __name__ == '__main__':
         '--json_path', 
         type=str, 
         required=True,
-        help='输入的 data.json 文件路径。\n例如: /data/luhaitian/datasets/spokenwoz/text_5700_test/data.json'
+        help='输入的 data.json 文件路径。
     )
     
     parser.add_argument(
@@ -117,4 +117,5 @@ if __name__ == '__main__':
     )
 
     args = parser.parse_args()
+
     process_data(args.json_path, args.output_path)
