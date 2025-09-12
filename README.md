@@ -93,6 +93,40 @@ Streaming Inference
 python infer_streaming.py --audio_path "./data/MUL0001.wav" --checkpoint_path "./ckpt/model_spokenwoz.pt" --output_dir "./inference_results"
 ```
 
+## Train
+
+### Data Preparation
+
+Two things have to be prepared for training:
+
+1. Training audio files (24kHz, 16-bit, stereo), placed under /path/to/your/audio_dir:
+   ```bash
+   audio_1.wav
+   audio_2.wav
+   audio_3.wav
+   ...
+   ```
+2. Turn-taking pattern labels, numpy arrays, same name as the training audio files, placed under /path/to/your/label_dir:
+   ```bash
+   audio_1.npy
+   audio_2.npy
+   audio_3.npy
+   ...
+   ```
+Turn-taking pattern labels' time frequency is 12.5 Hz (80 ms a frame), the shape of the numpy array should be (2, T), T = audio_duration / 80ms. 
+
+In the 'data_utils' directory, you can find scripts for preparing turn-taking pattern labels from SpokenWOZ dataset annotations:
+
+1. Using silero_vad to refine the utterance timestamps.
+2. Generating the turn-taking labels.
+
+### Start Training
+
+After data preparation, use the following command to start training:
+
+```bash
+python train.py --audio_dir /path/to/your/audio_dir --label_dir /path/to/your/label_dir --batch_size 32 --exp_name test
+```
 ## Results 
 
 The model achieves an ep-cutoff rate of 4.72% on SpokenWOZ test set.
