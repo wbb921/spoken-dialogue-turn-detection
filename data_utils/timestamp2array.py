@@ -248,10 +248,11 @@ if state_matrices:
             # Save the result to a NumPy file (.npy)
             # Remove the .wav extension from the original filename (if present), then add .npy
             base_audio_name = audio_name.rsplit('.', 1)[0] if '.' in audio_name else audio_name
-            output_filename = os.path.join(output_dir, f"output_matrix_{base_audio_name}.npy")
+            output_filename = os.path.join(output_dir, f"{base_audio_name}.npy")
             np.save(output_filename, matrix)
             print(f"结果已保存到 {output_filename}")
         else:
             print("该音频文件未生成有效状态矩阵 (可能时间过短或无数据)。")
 else:
+
     print(f"文件 '{file_to_process}' 未能生成任何对话状态矩阵。")
