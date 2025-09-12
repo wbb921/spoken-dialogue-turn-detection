@@ -27,8 +27,8 @@ This repository provides an implementation of spoken dialogue turn detection, wh
 ```bash
 conda create -n turn-detection python=3.10
 apt-get install libsndfile1
-git clone https://github.com/wbb921/speech-turn-detection.git
-cd speech-turn-detection
+git clone https://github.com/wbb921/spoken-dialogue-turn-detection.git
+cd spoken-dialogue-turn-detection
 pip install -r requirements
 ```
 
