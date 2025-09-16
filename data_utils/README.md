@@ -37,7 +37,7 @@ There are three steps for processing the SpokenWOZ dataset:
 
 3. Convert the txt timestamp file into numpy array:
    ```bash
-   python timestamps2array.py --input_file ./timestamps_vad_refined.txt  --output_dir my_results
+   python timestamp2array.py --input_file ./timestamps_vad_refined.txt  --output_dir my_results
    ```
    the generated numpy arrays will be in the output directory, with the same name as the audio files
    
