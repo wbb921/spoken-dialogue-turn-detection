@@ -10,7 +10,10 @@
 
 
 
-Spoken Dialogue Turn Detection refers to distinguishing between a short pause and the actual end of a user’s query.
+This repo can:
+
+1. Turn-taking prediction.
+2. Semantic VAD (distinguish short pause and end-of-utterance).
 
 Traditional approaches rely on Voice Activity Detection (VAD) with a fixed delay, which often misinterprets short pauses as endpoints, leading to delayed responses or premature cut-offs. 
 
