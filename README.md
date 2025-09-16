@@ -10,7 +10,7 @@
 
 
 
-This repo can:
+This repo can be used for:
 
 1. Turn-taking prediction.
 2. Semantic VAD (distinguish short pause and end-of-utterance).
