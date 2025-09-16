@@ -127,7 +127,7 @@ In the 'data_utils' directory, you can find scripts for preparing turn-taking pa
 After data preparation, use the following command to start training:
 
 ```bash
-python train.py --audio_dir /path/to/your/audio_dir --label_dir /path/to/your/label_dir --batch_size 32 --exp_name test
+python train.py --audio_dir /path/to/your/audio_dir --label_dir /path/to/your/label_dir --batch_size 32 --exp_name train_example
 ```
 ## Results 
 
