@@ -93,6 +93,8 @@ Streaming Inference
 python infer_streaming.py --audio_path "./data/MUL0001.wav" --checkpoint_path "./ckpt/model_spokenwoz.pt" --output_dir "./inference_results"
 ```
 
+The turn-taking states will be printed on the screen, while the numpy array which stores the turn-taking patterns will be saved in ./inference_results with the same name as the input audio, e.g. "MUL0001.npy"
+
 ## Train
 
 ### Data Preparation
